@@ -19,6 +19,7 @@ final class ValidRecipientMobile implements ValidationRule
     {
         if (! is_string($value) && ! is_numeric($value)) {
             $fail("The {$attribute} must be a valid mobile number.");
+
             return;
         }
 
@@ -26,11 +27,13 @@ final class ValidRecipientMobile implements ValidationRule
 
         if (strlen($mobile) !== 12) {
             $fail("The {$attribute} must be exactly 12 characters.");
+
             return;
         }
 
         if (! ctype_digit($mobile)) {
             $fail("The {$attribute} must contain only digits.");
+
             return;
         }
 

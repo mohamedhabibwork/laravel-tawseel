@@ -3,11 +3,11 @@
 namespace Habib\LaravelTawseel;
 
 use Habib\LaravelTawseel\Client\TawseelClient;
+use Habib\LaravelTawseel\Commands\LaravelTawseelCommand;
 use Habib\LaravelTawseel\Contracts\TawseelClientInterface;
 use Habib\LaravelTawseel\Enums\Environment;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Habib\LaravelTawseel\Commands\LaravelTawseelCommand;
 
 class LaravelTawseelServiceProvider extends PackageServiceProvider
 {

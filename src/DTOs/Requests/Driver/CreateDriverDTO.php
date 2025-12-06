@@ -9,7 +9,6 @@ use Habib\LaravelTawseel\Rules\ValidCarNumber;
 use Habib\LaravelTawseel\Rules\ValidDateOfBirth;
 use Habib\LaravelTawseel\Rules\ValidIdNumber;
 use Habib\LaravelTawseel\Rules\ValidMobileNumber;
-use Illuminate\Validation\Rule;
 
 final readonly class CreateDriverDTO
 {
@@ -58,14 +57,14 @@ final readonly class CreateDriverDTO
             'credential.companyName' => ['required', 'string'],
             'credential.password' => ['required', 'string'],
             'identityTypeId' => ['required', 'string'],
-            'idNumber' => ['required', 'string', new ValidIdNumber()],
-            'dateOfBirth' => ['required', 'integer', new ValidDateOfBirth()],
+            'idNumber' => ['required', 'string', new ValidIdNumber],
+            'dateOfBirth' => ['required', 'integer', new ValidDateOfBirth],
             'registrationDate' => ['required', 'date', 'date_format:Y-m-d\TH:i:s.v\Z'],
-            'mobile' => ['required', 'string', new ValidMobileNumber()],
+            'mobile' => ['required', 'string', new ValidMobileNumber],
             'regionId' => ['required', 'string'],
             'carTypeId' => ['required', 'string'],
             'cityId' => ['required', 'string'],
-            'carNumber' => ['required', 'string', new ValidCarNumber()],
+            'carNumber' => ['required', 'string', new ValidCarNumber],
             'vehicleSequenceNumber' => ['required', 'string'],
             // Note: City must belong to region - validated by API
             // Note: Vehicle sequence number must be from vehicle registration card - validated by API

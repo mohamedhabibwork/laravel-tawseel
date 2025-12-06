@@ -20,6 +20,7 @@ final class ValidDateOfBirth implements ValidationRule
     {
         if (! is_numeric($value)) {
             $fail("The {$attribute} must be numeric.");
+
             return;
         }
 
@@ -27,11 +28,13 @@ final class ValidDateOfBirth implements ValidationRule
 
         if (strlen($dateOfBirth) !== 8) {
             $fail("The {$attribute} must be exactly 8 digits (YYYYMMDD format).");
+
             return;
         }
 
         if (! ctype_digit($dateOfBirth)) {
             $fail("The {$attribute} must contain only digits.");
+
             return;
         }
 
@@ -42,6 +45,7 @@ final class ValidDateOfBirth implements ValidationRule
         // Basic validation - check if month and day are reasonable
         if ($month < 1 || $month > 12) {
             $fail("The {$attribute} has an invalid month.");
+
             return;
         }
 

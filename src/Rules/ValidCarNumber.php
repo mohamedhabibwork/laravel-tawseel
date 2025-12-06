@@ -19,11 +19,13 @@ final class ValidCarNumber implements ValidationRule
     {
         if (! is_string($value)) {
             $fail("The {$attribute} must be a string.");
+
             return;
         }
 
         if (strlen($value) !== 7) {
             $fail("The {$attribute} must be exactly 7 characters (4 digits + 3 letters).");
+
             return;
         }
 
@@ -32,6 +34,7 @@ final class ValidCarNumber implements ValidationRule
 
         if (! ctype_digit($digits)) {
             $fail("The {$attribute} must start with 4 digits.");
+
             return;
         }
 

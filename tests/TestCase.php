@@ -2,9 +2,9 @@
 
 namespace Habib\LaravelTawseel\Tests;
 
+use Habib\LaravelTawseel\LaravelTawseelServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Habib\LaravelTawseel\LaravelTawseelServiceProvider;
 
 class TestCase extends Orchestra
 {

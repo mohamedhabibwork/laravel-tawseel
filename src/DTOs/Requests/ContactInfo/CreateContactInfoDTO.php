@@ -47,10 +47,10 @@ final readonly class CreateContactInfoDTO
             'credential.password' => ['required', 'string'],
             'responsibleName' => ['required', 'string'],
             'responsibleEmail' => ['required', 'email'],
-            'responsibleMobileNumber' => ['required', 'string', new ValidRecipientMobile()],
+            'responsibleMobileNumber' => ['required', 'string', new ValidRecipientMobile],
             'technicalName' => ['required', 'string'],
             'technicalEmail' => ['required', 'email'],
-            'technicalMobileNumber' => ['required', 'string', new ValidRecipientMobile()],
+            'technicalMobileNumber' => ['required', 'string', new ValidRecipientMobile],
         ];
     }
 }

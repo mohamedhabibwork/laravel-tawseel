@@ -36,7 +36,7 @@ final readonly class AssignDriverToOrderDTO
             'credential.companyName' => ['required', 'string'],
             'credential.password' => ['required', 'string'],
             'referenceCode' => ['required', 'string'],
-            'idNumber' => ['required', 'string', new ValidIdNumber()],
+            'idNumber' => ['required', 'string', new ValidIdNumber],
             // Note: Order must be in "Accepted" status - validated by API
             // Note: Driver must be active and eligible - validated by API
             // Note: Driver eligibility checks (COVID-19, health, vaccination, etc.) - validated by API

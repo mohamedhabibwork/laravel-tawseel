@@ -33,7 +33,7 @@ final readonly class GetDriverDTO
         return [
             'credential.companyName' => ['required', 'string'],
             'credential.password' => ['required', 'string'],
-            'idNumber' => ['required', 'string', new ValidIdNumber()],
+            'idNumber' => ['required', 'string', new ValidIdNumber],
         ];
     }
 }

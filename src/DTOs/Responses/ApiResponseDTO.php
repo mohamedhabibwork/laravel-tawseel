@@ -10,8 +10,8 @@ namespace Habib\LaravelTawseel\DTOs\Responses;
 final readonly class ApiResponseDTO
 {
     /**
-     * @param T|null $data
-     * @param array<int> $errorCodes
+     * @param  T|null  $data
+     * @param  array<int>  $errorCodes
      */
     public function __construct(
         public bool $status,
@@ -20,7 +20,7 @@ final readonly class ApiResponseDTO
     ) {}
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      * @return self<mixed>
      */
     public static function fromArray(array $data): self

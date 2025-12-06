@@ -19,6 +19,7 @@ final class ValidCoordinates implements ValidationRule
     {
         if (! is_string($value)) {
             $fail("The {$attribute} must be a string.");
+
             return;
         }
 
@@ -26,6 +27,7 @@ final class ValidCoordinates implements ValidationRule
 
         if (! preg_match($pattern, $value)) {
             $fail("The {$attribute} must be in format 'latitude, longitude' (e.g., '24.7842, 46.6453').");
+
             return;
         }
 
@@ -36,6 +38,7 @@ final class ValidCoordinates implements ValidationRule
 
         if ($latitude < -90 || $latitude > 90) {
             $fail("The {$attribute} latitude must be between -90 and 90.");
+
             return;
         }
 

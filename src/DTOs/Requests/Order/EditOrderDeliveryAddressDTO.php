@@ -46,8 +46,8 @@ final readonly class EditOrderDeliveryAddressDTO
             'referenceCode' => ['required', 'string'],
             'regionId' => ['required', 'string'],
             'cityId' => ['required', 'string'],
-            'coordinates' => ['required', 'string', new ValidCoordinates()],
-            'storeLocation' => ['required', 'string', new ValidCoordinates()],
+            'coordinates' => ['required', 'string', new ValidCoordinates],
+            'storeLocation' => ['required', 'string', new ValidCoordinates],
             // Note: Order must not be rejected, executed, or canceled - validated by API
             // Note: City must belong to region - validated by API
         ];

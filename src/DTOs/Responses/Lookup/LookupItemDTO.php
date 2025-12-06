@@ -13,7 +13,7 @@ final readonly class LookupItemDTO
     ) {}
 
     /**
-     * @param array<string, mixed> $data
+     * @param  array<string, mixed>  $data
      */
     public static function fromArray(array $data): self
     {
@@ -25,7 +25,7 @@ final readonly class LookupItemDTO
     }
 
     /**
-     * @param array<int, array<string, mixed>> $items
+     * @param  array<int, array<string, mixed>>  $items
      * @return array<int, self>
      */
     public static function fromArrayCollection(array $items): array

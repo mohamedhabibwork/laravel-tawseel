@@ -60,14 +60,14 @@ final readonly class EditDriverDTO
             'credential.password' => ['required', 'string'],
             'refrenceCode' => ['required', 'string'],
             'identityTypeId' => ['required', 'string'],
-            'idNumber' => ['required', 'string', new ValidIdNumber()],
-            'dateOfBirth' => ['required', 'integer', new ValidDateOfBirth()],
+            'idNumber' => ['required', 'string', new ValidIdNumber],
+            'dateOfBirth' => ['required', 'integer', new ValidDateOfBirth],
             'registrationDate' => ['required', 'date', 'date_format:Y-m-d\TH:i:s.v\Z'],
-            'mobile' => ['required', 'string', new ValidMobileNumber()],
+            'mobile' => ['required', 'string', new ValidMobileNumber],
             'regionId' => ['required', 'string'],
             'carTypeId' => ['required', 'string'],
             'cityId' => ['required', 'string'],
-            'carNumber' => ['required', 'string', new ValidCarNumber()],
+            'carNumber' => ['required', 'string', new ValidCarNumber],
             'vehicleSequenceNumber' => ['required', 'string'],
             // Note: Reference code cannot be updated - validated by API
             // Note: Identity type, ID number, and nationality cannot be changed - validated by API

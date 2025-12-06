@@ -61,12 +61,12 @@ final readonly class CreateOrderDTO
             'deliveryTime' => ['required', 'date', 'date_format:Y-m-d\TH:i:s.v\Z'],
             'regionId' => ['required', 'string'],
             'cityId' => ['required', 'string'],
-            'coordinates' => ['required', 'string', new ValidCoordinates()],
+            'coordinates' => ['required', 'string', new ValidCoordinates],
             'storetName' => ['required', 'string', 'max:180'],
-            'storeLocation' => ['required', 'string', new ValidCoordinates()],
+            'storeLocation' => ['required', 'string', new ValidCoordinates],
             'categoryId' => ['required', 'string'],
             'orderDate' => ['required', 'date', 'date_format:Y-m-d\TH:i:s.v\Z'],
-            'recipientMobileNumber' => ['required', 'string', new ValidRecipientMobile()],
+            'recipientMobileNumber' => ['required', 'string', new ValidRecipientMobile],
             // Note: Order number must be unique per day - validated by API
             // Note: City must belong to region - validated by API
             // Note: Distance between store and delivery location must not exceed allowed limit - validated by API

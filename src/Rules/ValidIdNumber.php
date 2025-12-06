@@ -18,6 +18,7 @@ final class ValidIdNumber implements ValidationRule
     {
         if (! is_string($value) && ! is_numeric($value)) {
             $fail("The {$attribute} must be a valid ID number.");
+
             return;
         }
 
@@ -25,11 +26,13 @@ final class ValidIdNumber implements ValidationRule
 
         if (strlen($idNumber) !== 10) {
             $fail("The {$attribute} must be exactly 10 digits.");
+
             return;
         }
 
         if (! ctype_digit($idNumber)) {
             $fail("The {$attribute} must contain only digits.");
+
             return;
         }
 

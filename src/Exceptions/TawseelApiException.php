@@ -7,7 +7,7 @@ namespace Habib\LaravelTawseel\Exceptions;
 final class TawseelApiException extends TawseelException
 {
     /**
-     * @param array<int> $errorCodes
+     * @param  array<int>  $errorCodes
      */
     public function __construct(
         string $message,

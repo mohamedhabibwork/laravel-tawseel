@@ -7,7 +7,6 @@ namespace Habib\LaravelTawseel\Client;
 use Habib\LaravelTawseel\Contracts\TawseelClientInterface;
 use Habib\LaravelTawseel\DTOs\Requests\ContactInfo\CreateContactInfoDTO;
 use Habib\LaravelTawseel\DTOs\Requests\ContactInfo\GetContactInfoDTO;
-use Habib\LaravelTawseel\DTOs\Requests\CredentialDTO;
 use Habib\LaravelTawseel\DTOs\Requests\Driver\CreateDriverDTO;
 use Habib\LaravelTawseel\DTOs\Requests\Driver\DeactivateDriverDTO;
 use Habib\LaravelTawseel\DTOs\Requests\Driver\EditDriverDTO;
@@ -219,8 +218,9 @@ final class TawseelClient implements TawseelClientInterface
     }
 
     /**
-     * @param array<string, mixed> $data
-     * @param array<string, mixed> $rules
+     * @param  array<string, mixed>  $data
+     * @param  array<string, mixed>  $rules
+     *
      * @throws TawseelValidationException
      */
     private function validateRequest(array $data, array $rules): void
@@ -233,7 +233,8 @@ final class TawseelClient implements TawseelClientInterface
     }
 
     /**
-     * @param array<string, mixed> $payload
+     * @param  array<string, mixed>  $payload
+     *
      * @throws TawseelApiException
      * @throws TawseelAuthenticationException
      * @throws TawseelException
@@ -308,7 +309,7 @@ final class TawseelClient implements TawseelClientInterface
     }
 
     /**
-     * @param array<int> $errorCodes
+     * @param  array<int>  $errorCodes
      * @return array<string>
      */
     private function getErrorMessages(array $errorCodes): array

@@ -22,7 +22,6 @@ use Habib\LaravelTawseel\DTOs\Requests\Order\GetOrderDTO;
 use Habib\LaravelTawseel\DTOs\Requests\Order\RejectOrderDTO;
 use Habib\LaravelTawseel\DTOs\Responses\ContactInfo\ContactInfoResponseDTO;
 use Habib\LaravelTawseel\DTOs\Responses\Driver\DriverResponseDTO;
-use Habib\LaravelTawseel\DTOs\Responses\Lookup\LookupItemDTO;
 use Habib\LaravelTawseel\DTOs\Responses\Order\OrderExecutionResponseDTO;
 use Habib\LaravelTawseel\DTOs\Responses\Order\OrderResponseDTO;
 use Habib\LaravelTawseel\Enums\LookupType;
